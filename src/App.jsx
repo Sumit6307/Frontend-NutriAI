@@ -14,6 +14,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import ForgotPassword from './pages/ForgotPassword';
 import ResetPassword from './pages/ResetPassword';
+import {Scan} from './pages/Scan';
 import { motion } from 'framer-motion';
 
 const AppContent = () => {
@@ -81,6 +82,15 @@ const AppContent = () => {
                 <Settings />
               </ProtectedRoute>
             }
+          />
+
+          <Route
+            path="/scan/"
+            element={
+              <ProtectedRoute>
+                <Scan />
+              </ProtectedRoute>
+            } 
           />
           <Route path="*" element={<Login />} />
         </Routes>
